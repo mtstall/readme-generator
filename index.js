@@ -1,8 +1,8 @@
-// TODO: Include packages needed for this application
+// packages needed for this application
 const inquirer = require("inquirer");
 const fs = require("fs");
 
-// TODO: Create an array of questions for user input
+// array of questions for user input
 const questions = inquirer.prompt([
   {
     type: "input",
@@ -80,6 +80,7 @@ const questions = inquirer.prompt([
     default: "mtstallings95@gmail.com",
   },
 ])
+// use writeFile to create readme file
 .then((response) => {
     fs.writeFile('./example/README.md',generateReadme(response), (err) =>
     err ? console.error(err) : console.log('Readme generated!')
@@ -87,6 +88,7 @@ const questions = inquirer.prompt([
 }
 )
 
+// function to generate text for readme file
 function generateReadme (response) {
     let licenseInfo = response.license.split("|");
     return `
