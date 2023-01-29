@@ -90,7 +90,8 @@ const questions = inquirer.prompt([
 function generateReadme (response) {
     let logo = response.license.split("|");
     return `
-# ![License logo](${logo[1]})${response.title}
+![License logo](${logo[1]})<br>
+# ${response.title}
 ## Description
 ${response.description}
 ## Table of Contents
@@ -105,7 +106,7 @@ ${response.installation}
 ## Usage
 ${response.usage}
 ## License
-${logo[0]}
+This application is covered under the ${logo[0]} license.
 ## Contributing
 ${response.contributing}
 ## Tests

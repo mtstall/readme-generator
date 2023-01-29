@@ -1,5 +1,6 @@
 
-# ![License logo](https://img.shields.io/badge/License-MIT-yellow.svg)README Generator
+![License logo](https://img.shields.io/badge/License-MIT-yellow.svg)<br>
+# README Generator
 ## Description
 This project generates a README.
 ## Table of Contents
