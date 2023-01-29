@@ -8,25 +8,25 @@ const questions = inquirer.prompt([
     type: "input",
     message: "Enter project tile:",
     name: "title",
-    default: "Project Title",
+    default: "README Generator",
   },
   {
     type: "input",
     message: "Enter project description:",
     name: "description",
-    default: "Project Description",
+    default: "This project generates a README.",
   },
   {
     type: "input",
     message: "Installation instructions:",
     name: "installation",
-    default: "Installation Instructions",
+    default: "No installation needed.",
   },
   {
     type: "input",
     message: "Usage:",
     name: "usage",
-    default: "Usage",
+    default: "Use this application to generate a professional README.",
   },
   {
     type: "list",
@@ -74,25 +74,25 @@ const questions = inquirer.prompt([
     type: "input",
     message: "Contribution guidelines:",
     name: "contributing",
-    default: "Contribution guidelines",
+    default: "Fork the code to make contributions!",
   },
   {
     type: "input",
     message: "Test instructions:",
     name: "tests",
-    default: "Test instructions",
+    default: "Test code in the command prompt.",
   },
   {
     type: "input",
     message: "GitHub username:",
-    name: "github-username",
-    default: "GitHub username",
+    name: "username",
+    default: "mtstall",
   },
   {
     type: "input",
     message: "Email:",
     name: "email",
-    default: "Email address",
+    default: "mtstallings95@gmail.com",
   },
 ])
 .then((response) => {
@@ -118,8 +118,8 @@ ${response.contributing}
 ## Tests
 ${response.tests}
 ## Questions
-${response.github-username}
-${response.email}`
+<p><a href="https://www.github.com/${response.username}">GitHub profile</a></p>
+<p>${response.email}</p>`
 }
 
 // TODO: Create a function to initialize app
