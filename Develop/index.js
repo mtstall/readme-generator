@@ -35,8 +35,8 @@ const questions = inquirer.prompt([
       "Apache license 2.0|https://img.shields.io/badge/License-Apache_2.0-blue.svg",
       "Artistic license 2.0|https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg",
       "Boost Software License 1.0|https://img.shields.io/badge/License-Boost_1.0-lightblue.svg",
-      'BSD 2-clause license|https://img.shields.io/badge/License-BSD_2--Clause-orange.svg',
-      'BSD 3-clause license|https://img.shields.io/badge/License-BSD_3--Clause-blue.svg',
+      'BSD 2-clause|https://img.shields.io/badge/License-BSD_2--Clause-orange.svg',
+      'BSD 3-clause|https://img.shields.io/badge/License-BSD_3--Clause-blue.svg',
       "Creative Commons license family|https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg",
       "Do What The F*ck You Want To Public License|https://img.shields.io/badge/License-WTFPL-brightgreen.svg",
       "Eclipse Public License 1.0|https://img.shields.io/badge/License-EPL_1.0-red.svg",
@@ -90,16 +90,16 @@ const questions = inquirer.prompt([
 function generateReadme (response) {
     let logo = response.license.split("|");
     return `
-![License logo](${logo[1]})<br>
+![License logo](${logo[1]})  
 # ${response.title}
 ## Description
 ${response.description}
 ## Table of Contents
-[Installation](#installation)<br>
-[Usage](#usage)<br>
-[License](#license)<br>
-[Constributing](#contributing)<br>
-[Tests](#tests)<br>
+[Installation](#installation)  
+[Usage](#usage)  
+[License](#license)  
+[Constributing](#contributing)  
+[Tests](#tests)  
 [Questions](#questions)
 ## Installation
 ${response.installation}
@@ -112,8 +112,9 @@ ${response.contributing}
 ## Tests
 ${response.tests}
 ## Questions
-[GitHub profile](https://www.github.com/${response.username})    
-${response.email}  `
+GitHub profile: [mtstall](https://www.github.com/${response.username})    
+Email address: ${response.email}  
+Please email me to reach me with additional questions.`
 }
 
 // TODO: Create a function to initialize app
