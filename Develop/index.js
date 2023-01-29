@@ -32,43 +32,28 @@ const questions = inquirer.prompt([
     type: "list",
     choices: [
       "Academic Free License v3.0",
-      "Apache license 2.0",
-      "Artistic license 2.0",
-      "Boost Software License 1.0",
-      'BSD 2-clause "Simplified" license',
-      'BSD 3-clause "New" or "Revised" license',
-      "BSD 3-clause Clear license",
-      "Creative Commons license family",
-      "Creative Commons Zero v1.0 Universal",
-      "Creative Commons Attribution 4.0",
-      "Creative Commons Attribution Share Alike 4.0",
-      "Do What The F*ck You Want To Public License",
-      "Educational Community License v2.0",
-      "Eclipse Public License 1.0",
-      "Eclipse Public License 2.0",
-      "European Union Public License 1.1",
-      "GNU Affero General Public License v3.0",
-      "GNU General Public License family",
-      "GNU General Public License v2.0",
-      "GNU General Public License v3.0",
-      "GNU Lesser General Public License family",
-      "GNU Lesser General Public License v2.1",
-      "GNU Lesser General Public License v3.0",
-      "ISC",
-      "LaTeX Project Public License v1.3c",
-      "Microsoft Public License",
-      "MIT",
-      "Mozilla Public License 2.0",
-      "Open Software License 3.0",
-      "PostgreSQL License",
-      "SIL Open Font License 1.1",
-      "University of Illinois/NCSA Open Source License",
-      "The Unlicense",
-      "zLib License",
+      "Apache license 2.0|https://img.shields.io/badge/License-Apache_2.0-blue.svg",
+      "Artistic license 2.0|https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg",
+      "Boost Software License 1.0|https://img.shields.io/badge/License-Boost_1.0-lightblue.svg",
+      'BSD 2-clause license|https://img.shields.io/badge/License-BSD_2--Clause-orange.svg',
+      'BSD 3-clause license|https://img.shields.io/badge/License-BSD_3--Clause-blue.svg',
+      "Creative Commons license family|https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg",
+      "Do What The F*ck You Want To Public License|https://img.shields.io/badge/License-WTFPL-brightgreen.svg",
+      "Eclipse Public License 1.0|https://img.shields.io/badge/License-EPL_1.0-red.svg",
+      "GNU Affero General Public License v3.0|https://img.shields.io/badge/License-AGPL_v3-blue.svg",
+      "GNU General Public License v2.0|https://img.shields.io/badge/License-GPL_v2-blue.svg",
+      "GNU General Public License v3.0|https://img.shields.io/badge/License-GPLv3-blue.svg",
+      "GNU Lesser General Public License v3.0|https://img.shields.io/badge/License-LGPL_v3-blue.svg",
+      "ISC|https://img.shields.io/badge/License-ISC-blue.svg",
+      "MIT|https://img.shields.io/badge/License-MIT-yellow.svg",
+      "Mozilla Public License 2.0|https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg",
+      "SIL Open Font License 1.1|https://img.shields.io/badge/License-OFL_1.1-lightgreen.svg",
+      "The Unlicense https://img.shields.io/badge/license-Unlicense-blue.svg",
+      "zLib License https://img.shields.io/badge/License-Zlib-lightgrey.svg",
     ],
     message: "Choose a license:",
     name: "license",
-    default: "MIT"
+    default: "MIT|https://img.shields.io/badge/License-MIT-yellow.svg"
   },
   {
     type: "input",
@@ -103,23 +88,31 @@ const questions = inquirer.prompt([
 )
 
 function generateReadme (response) {
-    return `# ${response.title}
+    let logo = response.license.split("|");
+    return `
+# ![License logo](${logo[1]})${response.title}
 ## Description
 ${response.description}
 ## Table of Contents
+[Installation](#installation)<br>
+[Usage](#usage)<br>
+[License](#license)<br>
+[Constributing](#contributing)<br>
+[Tests](#tests)<br>
+[Questions](#questions)
 ## Installation
 ${response.installation}
 ## Usage
 ${response.usage}
 ## License
-${response.license}
+${logo[0]}
 ## Contributing
 ${response.contributing}
 ## Tests
 ${response.tests}
 ## Questions
-<p><a href="https://www.github.com/${response.username}">GitHub profile</a></p>
-<p>${response.email}</p>`
+[GitHub profile](https://www.github.com/${response.username})    
+${response.email}  `
 }
 
 // TODO: Create a function to initialize app

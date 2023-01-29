@@ -1,7 +1,14 @@
-# README Generator
+
+# ![License logo](https://img.shields.io/badge/License-MIT-yellow.svg)README Generator
 ## Description
 This project generates a README.
 ## Table of Contents
+[Installation](#installation)<br>
+[Usage](#usage)<br>
+[License](#license)<br>
+[Constributing](#contributing)<br>
+[Tests](#tests)<br>
+[Questions](#questions)
 ## Installation
 No installation needed.
 ## Usage
@@ -13,5 +20,5 @@ Fork the code to make contributions!
 ## Tests
 Test code in the command prompt.
 ## Questions
-<p><a href="https://www.github.com/mtstall">GitHub profile</a></p>
-<p>Please email me at mtstallings95@gmail.com if you have additional questions.</p>
+[GitHub profile](https://www.github.com/mtstall)    
+mtstallings95@gmail.com  
