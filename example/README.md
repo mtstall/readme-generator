@@ -1,5 +1,5 @@
 
-![License logo](https://img.shields.io/badge/License-MIT-yellow.svg)  
+![License licenseInfo](https://img.shields.io/badge/License-MIT-yellow.svg)  
 # README Generator
 ## Description
 This project generates a README.

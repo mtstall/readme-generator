@@ -81,16 +81,16 @@ const questions = inquirer.prompt([
   },
 ])
 .then((response) => {
-    fs.writeFile('README.md',generateReadme(response), (err) =>
+    fs.writeFile('./example/README.md',generateReadme(response), (err) =>
     err ? console.error(err) : console.log('Readme generated!')
     )
 }
 )
 
 function generateReadme (response) {
-    let logo = response.license.split("|");
+    let licenseInfo = response.license.split("|");
     return `
-![License logo](${logo[1]})  
+![License licenseInfo](${licenseInfo[1]})  
 # ${response.title}
 ## Description
 ${response.description}
@@ -106,7 +106,7 @@ ${response.installation}
 ## Usage
 ${response.usage}
 ## License
-This application is covered under the ${logo[0]} license.
+This application is covered under the ${licenseInfo[0]} license.
 ## Contributing
 ${response.contributing}
 ## Tests
