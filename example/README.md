@@ -1,6 +1,6 @@
 
 ![License licenseInfo](https://img.shields.io/badge/License-MIT-yellow.svg)  
-# README Generator
+# dfa
 ## Description
 This project generates a README.
 ## Table of Contents
