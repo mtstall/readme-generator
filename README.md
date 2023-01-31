@@ -7,7 +7,7 @@ Every GitHub project requires a README file to explain certain details about the
 [Installation](#installation)  
 [Usage](#usage)  
 [License](#license)  
-[Constributing](#contributing)
+[Constributing](#contributing)  
 [Deployment](#deployment)  
 [Questions](#questions)
 ## Installation
