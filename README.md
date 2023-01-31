@@ -8,7 +8,7 @@ Every GitHub project requires a README file to explain certain details about the
 [Usage](#usage)  
 [License](#license)  
 [Constributing](#contributing)  
-[Deployment](#deployment)  
+[Demonstration](#demonstration)  
 [Questions](#questions)
 ## Installation
 You will need the following tools and technologies to generate a professional README using this application:
@@ -24,7 +24,7 @@ This application is covered under the MIT license.
 ## Contributing
 Fork the code to make contributions or reach out to me via email.
 
-## Deployment
+## Demonstration
  * GitHub repository: https://github.com/mtstall/readme-generator 
  * Walkthrough video: https://drive.google.com/file/d/18daO6m-63amSHEovXTGsigF7AN70Sij7/view
 
